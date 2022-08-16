@@ -7,7 +7,9 @@ public class Binary_Search_704 {
     }
 
     static public int search(int[] nums, int target) {
+
         return recSeeker(nums, target, 0, nums.length);
+
     }
 
     private static int recSeeker(int[] nums, int target, int left, int right) {
@@ -19,7 +21,6 @@ public class Binary_Search_704 {
 
         else if (nums[mid] > target) {
             return recSeeker(nums, target, left, mid);
-        }
-        else return recSeeker(nums, target,mid + 1, right);
+        } else return recSeeker(nums, target, mid + 1, right);
     }
 }
